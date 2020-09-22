@@ -5,14 +5,16 @@ import '../styles/styles.scss'
 
 import Header from "../components/header"
 import Banner from "../components/banner"
-import HomeDetails from "../components/homeDetails"
+import HomeIntro from "../components/homeIntro"
+import HomeSkills from "../components/homeSkills"
 
 const IndexPage = () => (
   <div>
     <Header />
     <div className="home-container">
     <Banner />
-    <HomeDetails />
+    <HomeIntro />
+    <HomeSkills />
     </div>
   </div>
 )

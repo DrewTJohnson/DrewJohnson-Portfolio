@@ -13,25 +13,29 @@ $background-image: url("../images/cubes.png");
 
 html, body {
     font-family: $font;
-    font-size: 1.25rem;
+    // font-size: 1.25rem;
     margin: 0;
     padding: 0;
     background-image: $background-image;
     line-height: 30px;
+    font-size: clamp(1rem, 2.5vw, 1rem); 
 }
 
 .container {
     font-family: $font;
     width: 1640px;
-    min-width: 1640px;
+    max-width: 1640px;
     margin: 0 auto;
+    @media screen and (max-width: 1920px) {
+        max-width: 975px;
+    }
     @media(max-width: 1440px) {
         width: 1280px;
         min-width: 1280px;
     }
     @media(max-width: 1280px) {
         width: 976px;
-        min-width: 976px;
+        max-width: 976px;
     }
     @media(max-width: 976px) {
         width: 768px;
@@ -46,6 +50,7 @@ header {
     top: 0px;
     z-index: 10;
     background-color: $white;
+    max-width: 1640px;
     .inner-header{
         display: flex;
         align-items: center;
@@ -82,6 +87,9 @@ header {
     max-width: 1640px;
     margin: 0 auto;
     box-shadow: 0px 0px 15px 20px #c1c1c173;
+    @media screen and (max-width: 1920px) {
+        max-width: 1080px;
+    }
 }
 // banner styles
 .banner {
@@ -94,6 +102,9 @@ header {
     overflow-x: hidden;
     max-width: 1640px;
     margin: 0 auto;
+    @media screen and (max-width: 1920px) {
+        max-width: 1080px;
+    }
     .row {
         position: relative;
         .main-text {
@@ -112,6 +123,10 @@ header {
             @media (max-width: 1440px) {
                 font-size: 4.4rem;
                 letter-spacing: 36px;
+            }
+            @media screen and (max-width: 1640px) {
+                font-size: 3.1rem;
+                letter-spacing: 1.2rem;
             }
         }
         .end-text {
@@ -134,7 +149,7 @@ header {
         position: absolute;
         text-transform: uppercase;
         bottom: 45px;
-        left: 25px;
+        left: 2 5px;
     }
     .scroll {
         .bounce {
@@ -157,11 +172,19 @@ header {
 }
 
 // Home Body Styles
-.home-details {
+.home-intro {
     background-color: $white;
     max-width: 1640px;
     z-index: 9;
     margin: 0 auto;
+    @media screen and (max-width: 1920px) {
+        max-width: 1080px;
+    }
+    .container {
+        @media screen and (max-width: 1920px) {
+            max-width: 1080px;
+        }
+    }
     .primary-container {
         display: flex;
         align-items: center;
@@ -170,7 +193,7 @@ header {
         z-index: 9;
         overflow-x: hidden;
         .secondary-color {
-            background-color: $yellow;
+            background-color: $green;
             min-height: 100%;
             position: absolute;
             width: 50%;
@@ -270,5 +293,48 @@ header {
                 z-index: 9;
             }
         }
+    }
+}
+
+// Skills section
+.home-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: $off-white;
+    max-width: 1640px;
+    z-index: 9;
+    margin: 0 auto;
+    height: 50vh;
+    @media screen and (max-width: 1920px) {
+        max-width: 1080px;
+    }
+    .container {
+        align-items: center;
+        @media screen and (max-width: 1920px) {
+            max-width: 1080px;
+        }
+        .first-container, .second-container {
+            text-align: center;
+            margin: 15px 0px;
+        }
+        .flex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            .col {
+                flex: 1;
+            }
+        }
+
+    }
+    img {
+        max-width: 100px;
+    }
+    img:hover {
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        filter: blur(2px);
     }
 }
