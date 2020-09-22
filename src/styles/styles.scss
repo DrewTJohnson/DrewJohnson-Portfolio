@@ -1,0 +1,274 @@
+$font: "Verdana", sans-serif;
+
+// Colors
+$white: #fff;
+$black: #000;
+$maroon: #83333e;
+$off-white: #f2f4f5;
+$pink: #D68FD6;
+$yellow: #D6B38F;
+$green: #8FD68F;
+$light-blue: #8FB2D6;
+$background-image: url("../images/cubes.png");
+
+html, body {
+    font-family: $font;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+    background-image: $background-image;
+    line-height: 30px;
+}
+
+.container {
+    font-family: $font;
+    width: 1640px;
+    min-width: 1640px;
+    margin: 0 auto;
+    @media(max-width: 1440px) {
+        width: 1280px;
+        min-width: 1280px;
+    }
+    @media(max-width: 1280px) {
+        width: 976px;
+        min-width: 976px;
+    }
+    @media(max-width: 976px) {
+        width: 768px;
+        min-width: 768px;
+    }
+}
+//header styles
+header {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    background-color: $white;
+    .inner-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        .logo {
+            a {
+                font-weight: 700;
+                text-decoration: none;
+                letter-spacing: 1.5px;
+                color: $black;
+            }
+        }
+        .navigation {
+            a {
+                margin: 0 20px;
+                text-decoration: none;
+                letter-spacing: 1.75px;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                color: black;
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
+// home  container styles
+.home-container {
+    position: relative;
+    z-index: 9;
+    overflow-x: hidden;
+    max-width: 1640px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px 20px #c1c1c173;
+}
+// banner styles
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    position: relative;
+    height: 100vh;
+    z-index: 9;
+    overflow-x: hidden;
+    max-width: 1640px;
+    margin: 0 auto;
+    .row {
+        position: relative;
+        .main-text {
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            letter-spacing: 36px;
+            font-weight: 700;
+            color: $black;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            z-index: 9;
+            @media (max-width: 1440px) {
+                font-size: 4.4rem;
+                letter-spacing: 36px;
+            }
+        }
+        .end-text {
+            color: $white;
+        }
+        .banner-second-color {
+            width: 57%;
+            overflow: hidden;
+            position: relative;
+            left: 50%;
+            min-height: 100vh;
+            background-color: $pink;
+        }
+    }
+    .scroll {
+        font-weight: 700;
+        font-size: 0.850rem;
+        color: $black;
+        letter-spacing: 1.5px;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 45px;
+        left: 25px;
+    }
+    .scroll {
+        .bounce {
+            -moz-animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                }
+                40% {
+                    transform: translateY(-10px);
+                }
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+// Home Body Styles
+.home-details {
+    background-color: $white;
+    max-width: 1640px;
+    z-index: 9;
+    margin: 0 auto;
+    .primary-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50vh;
+        z-index: 9;
+        overflow-x: hidden;
+        .secondary-color {
+            background-color: $yellow;
+            min-height: 100%;
+            position: absolute;
+            width: 50%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            column-gap: 1em;
+            .paragraph-header {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                padding-left: 5px;
+                color: $white;
+                z-index: 9;
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    padding-left: 15px;
+                }
+            }
+            .details-paragraph {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                z-index: 9;
+                padding: 0 15px;
+            }
+        }
+    }
+    .secondary-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50vh;
+        z-index: 9;
+        overflow-x: hidden;
+        .secondary-color {
+            background-color: $green;
+            min-height: 100%;
+            position: absolute;
+            width: 50%;
+            right: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            column-gap: 1em;
+            .paragraph-header {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                color: $white;
+                z-index: 9;
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    padding-left: 15px;
+                }
+            }
+            .work-picture {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                color: $white;
+            }
+        }
+    }
+    .final-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 50vh;
+        z-index: 9;
+        overflow-x: hidden;
+        .secondary-color {
+            background-color: $light-blue;
+            min-height: 100%;
+            position: absolute;
+            width: 50%;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            column-gap: 1em;
+            .paragraph-header {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                padding-left: 5px;
+                color: $white;
+                z-index: 9;
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    padding-left: 15px;
+                }
+            }
+            .details-paragraph {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                z-index: 9;
+            }
+        }
+    }
+}
