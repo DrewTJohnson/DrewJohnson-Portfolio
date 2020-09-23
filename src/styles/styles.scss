@@ -26,8 +26,8 @@ html, body {
     width: 1640px;
     max-width: 1640px;
     margin: 0 auto;
-    @media screen and (max-width: 1920px) {
-        max-width: 975px;
+    @media screen and (max-width: 1440px) {
+        max-width: 1080px;
     }
     @media(max-width: 1440px) {
         width: 1280px;
@@ -49,19 +49,22 @@ header {
     position: absolute;
     top: 0px;
     z-index: 10;
-    background-color: $white;
-    max-width: 1640px;
+    background-color: transparent;
+    // max-width: 1640px;
     .inner-header{
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 80px;
+        width: 89%;
+        margin: 0 auto;
         .logo {
             a {
                 font-weight: 700;
                 text-decoration: none;
-                letter-spacing: 1.5px;
+                letter-spacing: 1.3px;
                 color: $black;
+                font-size: 1.5rem;
             }
         }
         .navigation {
@@ -72,6 +75,7 @@ header {
                 text-transform: uppercase;
                 font-size: 0.75rem;
                 color: black;
+                font-weight: 500;
                 &:last-child {
                     margin-right: 0px;
                 }
@@ -86,8 +90,10 @@ header {
     overflow-x: hidden;
     max-width: 1640px;
     margin: 0 auto;
-    box-shadow: 0px 0px 15px 20px #c1c1c173;
-    @media screen and (max-width: 1920px) {
+    box-shadow: 7px 7px 15px 11px #c1c1c173;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    @media screen and (max-width: 1440px) {
         max-width: 1080px;
     }
 }
@@ -97,13 +103,16 @@ header {
     align-items: center;
     background-color: $white;
     position: relative;
-    height: 100vh;
+    height: 90vh;
     z-index: 9;
     overflow-x: hidden;
-    max-width: 1640px;
+    width: 1640px;
     margin: 0 auto;
-    @media screen and (max-width: 1920px) {
+    @media screen and (max-width: 1440px) {
         max-width: 1080px;
+        .container {
+            max-width: 1080px;
+        }
     }
     .row {
         position: relative;
@@ -133,11 +142,11 @@ header {
             color: $white;
         }
         .banner-second-color {
-            width: 57%;
+            width: 60%;
             overflow: hidden;
             position: relative;
-            left: 50%;
-            min-height: 100vh;
+            left: 48%;
+            min-height: 90vh;
             background-color: $pink;
         }
     }
@@ -149,7 +158,7 @@ header {
         position: absolute;
         text-transform: uppercase;
         bottom: 45px;
-        left: 2 5px;
+        left: 25px;
     }
     .scroll {
         .bounce {
@@ -177,11 +186,11 @@ header {
     max-width: 1640px;
     z-index: 9;
     margin: 0 auto;
-    @media screen and (max-width: 1920px) {
+    @media screen and (max-width: 1440px) {
         max-width: 1080px;
     }
     .container {
-        @media screen and (max-width: 1920px) {
+        @media screen and (max-width: 1440px) {
             max-width: 1080px;
         }
     }
@@ -196,7 +205,7 @@ header {
             background-color: $green;
             min-height: 100%;
             position: absolute;
-            width: 50%;
+            width: 48%;
         }
         .grid-container {
             display: grid;
@@ -306,12 +315,12 @@ header {
     z-index: 9;
     margin: 0 auto;
     height: 50vh;
-    @media screen and (max-width: 1920px) {
+    @media screen and (max-width: 1440px) {
         max-width: 1080px;
     }
     .container {
         align-items: center;
-        @media screen and (max-width: 1920px) {
+        @media screen and (max-width: 1440px) {
             max-width: 1080px;
         }
         .first-container, .second-container {
@@ -329,12 +338,49 @@ header {
         }
 
     }
+    .image-container {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
     img {
         max-width: 100px;
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: 25px auto;
     }
-    img:hover {
+}
+    .image-container:hover {
         -webkit-filter: blur(2px);
         -moz-filter: blur(2px);
         filter: blur(2px);
+        .image-overlay .popup {
+            display: block;
+        }
+    }
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+    .popup {
+        color: $black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .image-overlay {
+        display: none;
     }
 }
