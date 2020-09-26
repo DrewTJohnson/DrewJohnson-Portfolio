@@ -10,7 +10,6 @@ const Header = () => (
         <Link to="/">DTJ</Link>
       </div>
       <div className="navigation">
-        <Link to="/about">About</Link>
         <Link to="/work">Work</Link>
         <Link to="/contact">Contact</Link>
       </div>

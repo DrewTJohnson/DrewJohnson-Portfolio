@@ -30,8 +30,8 @@ html, body {
         max-width: 1080px;
     }
     @media(max-width: 1440px) {
-        width: 1280px;
-        min-width: 1280px;
+        width: 1080px;
+        max-width: 1080px;
     }
     @media(max-width: 1280px) {
         width: 976px;
@@ -40,6 +40,7 @@ html, body {
     @media(max-width: 976px) {
         width: 768px;
         min-width: 768px;
+        margin: 0;
     }
 }
 //header styles
@@ -93,8 +94,12 @@ header {
     box-shadow: 7px 7px 15px 11px #c1c1c173;
     margin-top: 100px;
     margin-bottom: 100px;
+    min-width: 768px;
     @media screen and (max-width: 1440px) {
         max-width: 1080px;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 976px;
     }
 }
 // banner styles
@@ -112,6 +117,11 @@ header {
         max-width: 1080px;
         .container {
             max-width: 1080px;
+        }
+    }
+    @media screen and (max-width: 1025px) {
+        .container {
+            max-width: 976px;
         }
     }
     .row {
@@ -137,6 +147,9 @@ header {
                 font-size: 3.1rem;
                 letter-spacing: 1.2rem;
             }
+            @media screen and (max-width: 1024px) {
+                font-size: 2.2rem;
+            }
         }
         .end-text {
             color: $white;
@@ -148,6 +161,10 @@ header {
             left: 48%;
             min-height: 90vh;
             background-color: $pink;
+            @media only screen and (min-width: 976px) and (max-width: 1024px) {
+                    width: 51%;
+                    left: 45%;
+            }
         }
     }
     .scroll {
@@ -191,7 +208,10 @@ header {
     }
     .container {
         @media screen and (max-width: 1440px) {
-            max-width: 1080px;
+            max-width: 1280px;
+        }
+        @media screen and (max-width: 1024px) {
+            max-width: 976px;
         }
     }
     .primary-container {
@@ -206,6 +226,9 @@ header {
             min-height: 100%;
             position: absolute;
             width: 48%;
+            @media only screen and (min-width: 976px) and (max-width: 1024px) {
+                width: 50.3%;
+            }
         }
         .grid-container {
             display: grid;
@@ -321,7 +344,7 @@ header {
     .container {
         align-items: center;
         @media screen and (max-width: 1440px) {
-            max-width: 1080px;
+            max-width: 1280px;
         }
         .first-container, .second-container {
             text-align: center;
@@ -348,15 +371,27 @@ header {
         height: auto;
         width: 100%;
         margin: 25px auto;
+        -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transition-delay: 2ms;
+    transition-delay: 2ms;
     }
 }
     .image-container:hover {
+        img {
         -webkit-filter: blur(2px);
         -moz-filter: blur(2px);
         filter: blur(2px);
-        .image-overlay .popup {
-            display: block;
         }
+        .popup {
+            -webkit-filter: none;
+            -moz-filter: none;
+            filter: none;
+            opacity: 1.0;
+        }
+    
     }
     .image-overlay {
         position: absolute;
@@ -373,14 +408,107 @@ header {
         color: $black;
         font-size: 20px;
         position: absolute;
+        font-weight: 700;
+        background-color: $off-white;
+        box-shadow: 0 0 5px 10px $off-white;
+        padding: 5px;
+        width: 200px;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
+        opacity: 0;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -ms-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
     }
     .image-overlay {
         display: none;
+    }
+}
+
+.work-container {
+    position: relative;
+    z-index: 9;
+    overflow-x: hidden;
+    max-width: 1640px;
+    margin: 0 auto;
+    box-shadow: 7px 7px 15px 11px #c1c1c173;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    min-width: 768px;
+    height: 50vh;
+    background-color: $white;
+    h1 {
+        text-align: center;
+        position: relative;
+        top: 50%
+    }
+    @media screen and (max-width: 1440px) {
+        max-width: 1080px;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 976px;
+    }
+}
+
+.contact-container {
+    position: relative;
+    z-index: 9;
+    overflow-x: hidden;
+    max-width: 1640px;
+    margin: 0 auto;
+    box-shadow: 7px 7px 15px 11px #c1c1c173;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    min-width: 768px;
+    height: 75vh;
+    background-color: $white;
+    padding: 50px;
+    font-family: $font;
+    h1 {
+        text-align: center;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+    }
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    button[type=submit] {
+        background-color: $pink;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: right;
+        float: right;
+    }
+    button[type=submit]:hover {
+        background-color: $yellow;
+    }
+    @media screen and (max-width: 1440px) {
+        max-width: 1080px;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 976px;
     }
 }
