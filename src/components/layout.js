@@ -26,17 +26,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, shrink-to-fit=yes"></meta>
+      <div>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, shrink-to-fit=yes"></meta>
         <main>{children}</main>
         <footer style={{
-          marginTop: `2rem`
+          marginTop: `2rem`,
+          marginBottom: `2rem`,
+          float: `right`,
+          marginRight: `2rem`
         }}>
           © {new Date().getFullYear()}, Built with
           {` `}
