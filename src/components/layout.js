@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
-        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0, maximum-scale=1, shrink-to-fit=no"></meta>
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0, maximum-scale=1, shrink-to-fit=yes"></meta>
         <main>{children}</main>
         <footer style={{
           marginTop: `2rem`,
