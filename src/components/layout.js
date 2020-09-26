@@ -33,6 +33,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, shrink-to-fit=yes"></meta>
         <main>{children}</main>
         <footer style={{
           marginTop: `2rem`

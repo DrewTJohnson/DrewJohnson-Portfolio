@@ -8,15 +8,16 @@ import Banner from "../components/banner"
 import HomeIntro from "../components/homeIntro"
 import HomeSkills from "../components/homeSkills"
 
-const IndexPage = () => (
+const IndexPage = () => {
+    return (
   <div>
-    <Header />
-    <div className="home-container">
-    <Banner />
-    <HomeIntro />
-    <HomeSkills />
+      <Header />
+      <div className="home-container">
+      <Banner />
+      <HomeIntro />
+      <HomeSkills />
+      </div>
     </div>
-  </div>
-)
-
+  )
+}
 export default IndexPage
