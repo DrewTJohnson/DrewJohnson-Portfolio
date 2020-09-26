@@ -11,6 +11,10 @@ import HomeSkills from "../components/homeSkills"
 const IndexPage = () => {
     return (
   <div>
+    <Helmet>
+      <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+      <title>Drew T. Johnson</title>
+    </Helmet>
       <Header />
       <div className="home-container">
       <Banner />

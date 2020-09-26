@@ -1,5 +1,6 @@
 import React from "react"
 import '../styles/styles.scss'
+import Helmet from "react-helmet"
 
 // import components
 
@@ -9,6 +10,10 @@ const contactPage = () => {
      
      return (
         <div>
+            <Helmet>
+                <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+                <title>Drew T. Johnson</title>
+            </Helmet>
             <Header />
             <div className="contact-container">
                 <h1>CONTACT</h1>
